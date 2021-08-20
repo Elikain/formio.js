@@ -437,7 +437,7 @@ export function uniqueName(name, template, evalContext) {
     guid: guid()
   });
   //only letters, numbers, dots, dashes, underscores and spaces are allowed. Anything else will be replaced with dash
-  const uniqueName = `${Evaluator.interpolate(template, evalContext)}${extension}`.replace(/[^0-9a-zA-Z.\-_ ]/g, '-');
+  const uniqueName = `${Evaluator.interpolate(template, evalContext)}${extension}`.replace(/[^0-9a-zA-Zа-яА-ЯёЁ.\-_ ]/g, '-');
   return uniqueName;
 }
 
